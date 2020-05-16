@@ -1,5 +1,21 @@
 const total = 100;
-const ordered = 50;
+let ordered;
+
+ordered = document.querySelector('input');
+
+const userButtonEvent = document.querySelector('button');
+
+
+
+
+userButtonEvent.addEventListener('click',() => {
+  ordered = Number(ordered.value);
+  const isProcessed = ordered <= total;
+
+  isProcessed ?  console.log(`Заказ оформлен, с вами свяжется менеджер`) : console.log(`На складе недостаточно товаров!`);
+});
+
+
 
 
 // if (ordered <= total) {
@@ -8,6 +24,8 @@ const ordered = 50;
 // } else {
 //   console.log(`На складе недостаточно товаров!`);
 
-const isProcessed = ordered <= total;
 
-isProcessed ?  console.log(`Заказ оформлен, с вами свяжется менеджер`) : console.log(`На складе недостаточно товаров!`);
+
+// const isProcessed = ordered <= total;
+
+// isProcessed ?  console.log(`Заказ оформлен, с вами свяжется менеджер`) : console.log(`На складе недостаточно товаров!`);
