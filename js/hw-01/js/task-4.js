@@ -2,10 +2,11 @@ const credits = 23580;
 const pricePerDroid = 3000;
 let totalPrice;
 let numberOfDroids;
-
 let message;
 
-message = prompt(`Какое количество дроидов вы желаете приобрести?`);
+const userInput = prompt(`Какое количество дроидов вы желаете приобрести?`);
+
+message = userInput;
 
 if (message === null) {
   console.log("Отменено пользователем");

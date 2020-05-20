@@ -1,6 +1,5 @@
-let message;
 let price;
-message = prompt(`В какую страну хотите оформить доставку?`);
+const message = prompt(`В какую страну хотите оформить доставку?`);
 
 
 
