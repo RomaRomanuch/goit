@@ -1,11 +1,11 @@
 const total = 100;
-let ordered;
-
-
-ordered = prompt("Сколько товаров желаете приобрести?")
+let ordered = 50;
 
 
 
-const isProcessed = ordered <= total;
+if(ordered <= total) {
+  console.log(`Заказ оформлен, с вами свяжется менеджер`);
+}else {
+  console.log(`На складе недостаточно товаров!`);
+}
 
-isProcessed ?  console.log(`Заказ оформлен, с вами свяжется менеджер`) : console.log(`На складе недостаточно товаров!`);
