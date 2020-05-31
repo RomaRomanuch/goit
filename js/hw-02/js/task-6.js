@@ -15,9 +15,13 @@ do {
   }
 } while (input !== null);
 
-for(let number of numbers) {
+if(numbers.length == 0){
+  alert('нужно ввести число');
+}else for(let number of numbers) {
   total += number;
 }
+
+
 
 console.log(`Общая сумма равна ${total}`);
 

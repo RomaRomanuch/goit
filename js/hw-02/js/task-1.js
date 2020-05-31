@@ -1,12 +1,11 @@
 let names = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
-let count = 0;
 
 const logItems = function(array) {
+  let count = 0;
   
-  for (name of names) {
+  for (let i = 0; i < names.length; i += 1) {
     count += 1;
-    console.log(`${count} \- ${name}`);
-
+    console.log(`${count} \- ${names[i]}`);
   }
 }; 
 
