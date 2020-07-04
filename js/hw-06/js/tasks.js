@@ -1,6 +1,6 @@
 import { users } from "./users.js";
 
-//task-1
+// task-1
 
 const getUserNames = users => users.map(user => user.name);
 
@@ -34,15 +34,10 @@ const getUserWithEmail = (users, email) =>
 console.log(getUserWithEmail(users, "shereeanthony@kog.com")); // {объект пользователя Sheree Anthony}
 console.log(getUserWithEmail(users, "elmahead@omatom.com")); // {объект пользователя Elma Head}
 
-//task-6
+// task-6
 
 const getUsersWithAge = (users, min, max) =>
-  users.filter(function (user) {
-    if (user.age < max && user.age > min) {
-      return user;
-    }
-  });
-/// Написать стрелочную функцию!
+  users.filter(user => user.age < max && user.age > min);
 
 console.log(getUsersWithAge(users, 20, 30));
 console.log(getUsersWithAge(users, 30, 40));
@@ -76,15 +71,21 @@ const getNamesSortedByFriendsCount = users =>
 console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
-//task-10
+// task-10
 
-const getSortedUniqueSkills = users =>
-  users.reduce((acc, user) => {
-    if (!acc.includes(...user.skills)) {
-      acc.push(...user.skills);
-    }
-    acc.sort();
+const getSortedUniqueSkills = users => {
+  const allSkills = users.reduce((acc, user) => {
+    acc.push(...user.skills);
     return acc;
   }, []);
+  const result = [];
+  allSkills.forEach(element => {
+    if (!result.includes(element)) {
+      result.push(element);
+    }
+  });
+  result.sort();
+  return result;
+};
 
 console.log(getSortedUniqueSkills(users));
