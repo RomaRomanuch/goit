@@ -15,16 +15,13 @@ incrementRef.addEventListener("click", increment);
 btnReset.addEventListener("click", reset);
 //functions
 function increment() {
-  counterValue += 1;
-  return (valueRef.innerHTML = counterValue);
+  valueRef.innerHTML = counterValue += 1;
 }
 
 function decrement() {
-  counterValue -= 1;
-  return (valueRef.innerHTML = counterValue);
+  valueRef.innerHTML = counterValue -= 1;
 }
 
 function reset() {
-  counterValue = 0;
-  return (valueRef.innerHTML = counterValue);
+  valueRef.innerHTML = counterValue = 0;
 }

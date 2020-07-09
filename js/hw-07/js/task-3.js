@@ -16,21 +16,15 @@ const images = [
   },
 ];
 
-const createDom = image => {
+const createDom = images.forEach(image => {
   const galleryRef = document.querySelector("#gallery");
-  const galleryItem = document.createElement("li");
   const itemImage = document.createElement("img");
 
   itemImage.src = image.url;
   itemImage.alt = image.alt;
 
-  galleryItem.classList.add("gallery__item");
-  itemImage.classList.add("gallery__img");
-  galleryRef.appendChild(galleryItem);
-  galleryItem.appendChild(itemImage);
-  return image;
-};
-
-images.forEach(image => {
-  createDom(image);
+  galleryRef.insertAdjacentHTML(
+    "afterbegin",
+    `<li><img src = '${itemImage.src}' alt = '${itemImage.alt}'></li>`,
+  );
 });

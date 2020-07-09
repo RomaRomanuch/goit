@@ -8,12 +8,9 @@ const ingredients = [
 ];
 
 const ingredientsRef = document.querySelector("#ingredients");
-const createdItem = document.createElement("li");
 
-createdItem.textContent = ingredients[0];
-
-const a = ingredients.forEach(item => {
-  const clonedElement = createdItem.cloneNode(true);
-  clonedElement.textContent = item;
-  ingredientsRef.append(clonedElement);
+ingredients.forEach((item, i) => {
+  const createdItem = document.createElement("li");
+  createdItem.textContent = ingredients[i];
+  ingredientsRef.appendChild(createdItem);
 });
