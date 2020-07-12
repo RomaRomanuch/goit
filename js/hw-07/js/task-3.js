@@ -15,16 +15,15 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-
+const galleryRef = document.querySelector("#gallery");
+let string = "";
 const createDom = images.forEach(image => {
-  const galleryRef = document.querySelector("#gallery");
   const itemImage = document.createElement("img");
 
   itemImage.src = image.url;
   itemImage.alt = image.alt;
 
-  galleryRef.insertAdjacentHTML(
-    "afterbegin",
-    `<li><img src = '${itemImage.src}' alt = '${itemImage.alt}'></li>`,
-  );
+  string += `<li><img src = '${itemImage.src}' alt = '${itemImage.alt}'></li>`;
 });
+
+galleryRef.insertAdjacentHTML("afterbegin", string);

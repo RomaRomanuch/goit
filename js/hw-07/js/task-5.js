@@ -6,7 +6,7 @@ const outputOriginContent = greetingRef.textContent;
 
 function greetName() {
   greetingRef.innerHTML = inputRef.value;
-  if (greetingRef.textContent === "") {
-    greetingRef.innerHTML = outputOriginContent;
-  }
+  greetingRef.textContent === ""
+    ? (greetingRef.innerHTML = outputOriginContent)
+    : "";
 }
