@@ -8,11 +8,11 @@ const ingredients = [
 ];
 
 const ingredientsRef = document.querySelector("#ingredients");
-const result = [];
-ingredients.forEach((item, i) => {
+
+const ingredientList = ingredients.map((item, i) => {
   const createdItem = document.createElement("li");
   createdItem.textContent = ingredients[i];
-  result.push(createdItem);
+  return createdItem;
 });
 
-ingredientsRef.append(...result);
+ingredientsRef.append(...ingredientList);

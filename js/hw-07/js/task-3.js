@@ -16,14 +16,14 @@ const images = [
   },
 ];
 const galleryRef = document.querySelector("#gallery");
-let string = "";
-const createDom = images.forEach(image => {
+
+const galleryString = images.reduce((acc, cur) => {
   const itemImage = document.createElement("img");
 
-  itemImage.src = image.url;
-  itemImage.alt = image.alt;
+  itemImage.src = cur.url;
+  itemImage.alt = cur.alt;
+  const string = `<li><img src = '${itemImage.src}' alt = '${itemImage.alt}'></li>`;
+  return (acc += string);
+}, "");
 
-  string += `<li><img src = '${itemImage.src}' alt = '${itemImage.alt}'></li>`;
-});
-
-galleryRef.insertAdjacentHTML("afterbegin", string);
+galleryRef.insertAdjacentHTML("afterbegin", galleryString);
