@@ -1,0 +1,29 @@
+.list {
+  list-style: none;
+}
+
+.item {
+  background-color: white;
+  width: 400px;
+  position: relative;
+}
+
+.avatar {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.name {
+  margin-left: 50px;
+}
+
+.status {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}

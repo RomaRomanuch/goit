@@ -1,0 +1,20 @@
+.transaction {
+  background-color: white;
+  width: 600px;
+}
+
+.t_body {
+  text-align: center;
+}
+
+.t_body tr:nth-child(odd) {
+  background-color: lightcyan;
+}
+
+.t_body tr:nth-child(even) {
+  background-color: blue;
+}
+
+.t_title {
+  background-color: wheat;
+}

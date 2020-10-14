@@ -1,0 +1,41 @@
+.statistics {
+  width: 600px;
+  height: 400px;
+}
+
+.title {
+  display: flex;
+  height: 200px;
+  background-color: white;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.statlist {
+  list-style: none;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.label {
+  display: block;
+}
+
+.percentage {
+  display: block;
+}
