@@ -14,7 +14,7 @@ function updateMarkup(data) {
   } else {
     error({
       title: 'Ошибка',
-      text: 'To many matches found. Please enter more specific query!',
+      text: 'To many matches found. Please enter MORE specific query!',
     });
   }
 }
